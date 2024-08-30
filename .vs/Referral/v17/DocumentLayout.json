@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\Referral\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|c:\\users\\admin\\source\\repos\\referral\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|c:\\users\\admin\\source\\repos\\referral\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|c:\\users\\admin\\source\\repos\\referral\\models\\referraldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|solutionrelative:models\\referraldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|c:\\users\\admin\\source\\repos\\referral\\referralcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC41B6A6-3F79-42F2-B022-7D2D32122CE6}|Referral.csproj|solutionrelative:referralcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Referral\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Referral\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T11:43:38.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReferralData.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Referral\\Models\\ReferralData.cs",
+              "RelativeDocumentMoniker": "Models\\ReferralData.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Referral\\Models\\ReferralData.cs",
+              "RelativeToolTip": "Models\\ReferralData.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T11:27:49.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReferralContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Referral\\ReferralContext.cs",
+              "RelativeDocumentMoniker": "ReferralContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Referral\\ReferralContext.cs",
+              "RelativeToolTip": "ReferralContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T11:28:16.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Referral\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Referral\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T10:26:20.901Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
