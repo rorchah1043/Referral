@@ -16,7 +16,7 @@ class Program
     private static ReceiverOptions _receiverOptions;
     private static async Task Main()
     {
-        _botClient = new TelegramBotClient("7528880932:AAHgPXrDuwvu5wJkBQ974RWJoadCA25kOrk");
+        _botClient = new TelegramBotClient("");
 
 
         try
