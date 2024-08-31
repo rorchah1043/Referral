@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Referral.Models;
 
-namespace ReferralSystem
+namespace Referral
 {
     public class ReferralContext : DbContext
     {
@@ -10,7 +10,7 @@ namespace ReferralSystem
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = test.db");
+            optionsBuilder.UseSqlite("Data Source=test.db");
         }
     }
 }
