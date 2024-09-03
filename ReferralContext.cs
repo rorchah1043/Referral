@@ -10,7 +10,7 @@ namespace Referral
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=test.db");
+            optionsBuilder.UseNpgsql("Data Source=test.db");
         }
     }
 }

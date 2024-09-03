@@ -7,6 +7,10 @@ namespace Referral.Models
 {
     public class ReferralData
     {
+
+        [Key]
+        public Guid Id { get; set; }
+
         [Required]
         public string AuthKey { get; set; }
 
