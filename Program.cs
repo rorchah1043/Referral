@@ -9,7 +9,7 @@ class Program
 {
     private static ITelegramBotClient _botClient;
     private static ReceiverOptions _receiverOptions;
-    private static ReferralProcessor _referralProcessor;
+
     private static async Task Main()
     {
         _botClient = new TelegramBotClient("7528880932:AAHgPXrDuwvu5wJkBQ974RWJoadCA25kOrk");
@@ -71,10 +71,25 @@ class Program
 
                 using var context = new ReferralContext();
                 context.Database.EnsureCreated();
-                _referralProcessor = new(userId.ToString(),referrer.ToString(), HandleDeadend);
-                
-                _referralProcessor.ProcessReferral(context);
+                ReferralProcessor rp = new(context);
 
+               
+                    if (rp.UserExists(userId.ToString()) || rp.ReferralDataExists(userId.ToString()))
+                    {
+                        HandleDeadend();
+                    }
+
+                    rp.GetOrCreateReferralData(userId.ToString(), referrer.ToString());
+
+                    var referrerData = context.ReferralData.SingleOrDefault(rd => rd.AuthKey == referrer.ToString());
+                    if (referrerData == null)
+                    {
+                        HandleDeadend();
+                    }
+
+                    rp.AddReferralIfNotExists(referrerData, userId.ToString());
+                    context.SaveChanges();
+                
 
                 try
                 {
@@ -92,8 +107,6 @@ class Program
 
     }
 
-
-
     private static Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
     {
         Console.WriteLine($"Произошла ошибка: {exception.Message}");
@@ -105,5 +118,6 @@ class Program
     {
         Console.WriteLine("Deadend");
     }
+
 
 }

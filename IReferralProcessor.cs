@@ -9,9 +9,9 @@ namespace Referral
 {
     interface IReferralProcessor
     {
-        bool UserExists(ReferralContext context, string currentUserId);
-        bool ReferralDataExists(ReferralContext context, string currentUserId);
-        ReferralData GetOrCreateReferralData(ReferralContext context, string currentUserId, string referrerId);
+        bool UserExists(string currentUserId);
+        bool ReferralDataExists(string currentUserId);
+        ReferralData GetOrCreateReferralData(string currentUserId, string referrerId);
         void AddReferralIfNotExists(ReferralData referrerData, string currentUserId);
     }
 

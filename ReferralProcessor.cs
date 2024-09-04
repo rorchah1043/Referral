@@ -7,24 +7,25 @@ using System.Threading.Tasks;
 
 namespace Referral
 {
-    class ReferralProcessor(string currentUserId, string referrerId, Action handleDeadend) : IReferralProcessor
+    class ReferralProcessor(ReferralContext context) : IReferralProcessor
     {
-        string _currentUserId = currentUserId; 
-        string _referrerId = referrerId;
-        Action HandleDeadend = handleDeadend;
+        ReferralContext _referralContext = context;
 
-        public bool UserExists(ReferralContext context, string currentUserId)
+        public bool UserExists(string currentUserId)
         {
+            ReferralContext context = _referralContext;
             return context.Users.SingleOrDefault(u => u.AuthKey == currentUserId) != null;
         }
 
-        public bool ReferralDataExists(ReferralContext context, string currentUserId)
+        public bool ReferralDataExists(string currentUserId)
         {
+            ReferralContext context = _referralContext;
             return context.ReferralData.SingleOrDefault(rd => rd.AuthKey == currentUserId && !string.IsNullOrEmpty(rd.Referrer)) != null;
         }
 
-        public ReferralData GetOrCreateReferralData(ReferralContext context, string currentUserId, string referrerId)
+        public ReferralData GetOrCreateReferralData(string currentUserId, string referrerId)
         {
+            ReferralContext context = _referralContext;
             var referralData = context.ReferralData.SingleOrDefault(rd => rd.AuthKey == currentUserId);
             if (referralData == null)
             {
@@ -48,28 +49,6 @@ namespace Referral
                 referrerData.ReferralList = referrals; 
             }
         }
-
-        public void ProcessReferral(ReferralContext context)
-        {
-            if (UserExists(context, _currentUserId) || ReferralDataExists(context, _currentUserId))
-            {
-                HandleDeadend();
-                return;
-            }
-
-            GetOrCreateReferralData(context, currentUserId, referrerId);
-
-            var referrerData = context.ReferralData.SingleOrDefault(rd => rd.AuthKey == referrerId);
-            if (referrerData == null)
-            {
-                HandleDeadend();
-                return;
-            }
-
-            AddReferralIfNotExists(referrerData, currentUserId);
-            context.SaveChanges();
-        }
-
     }
    
 }
