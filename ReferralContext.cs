@@ -10,7 +10,7 @@ namespace Referral
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Data Source=test.db");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=test;Username=postgres;Password=;");
         }
     }
 }

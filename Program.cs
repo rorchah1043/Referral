@@ -70,7 +70,7 @@ class Program
                 }
 
                 using var context = new ReferralContext();
-                context.Database.EnsureCreated();
+                if(context.Database.EnsureCreated()) Console.WriteLine("Base Created");
                 ReferralProcessor rp = new(context);
 
                
@@ -86,8 +86,12 @@ class Program
                     {
                         HandleDeadend();
                     }
+                    else
+                    {
+                        rp.AddReferralIfNotExists(referrerData, userId.ToString());
 
-                    rp.AddReferralIfNotExists(referrerData, userId.ToString());
+                    }
+
                     context.SaveChanges();
                 
 
